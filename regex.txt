@@ -1,0 +1,22 @@
+Just a practise place:
+
+
+1st: How to match a particular string
+
+/aman/                  -> Matches aman
+/[aman]/                -> Matches a or m or a or n
+/ [aman]999/            -> a999 m999
+/ [^aman]999 /          -> b999 o999
+/ [^aeiou]000/          -> a000 e000 i000 o000 u000 (Not valid ones) || n000 (Valid)
+/ [a-zA-Z ]+deoli/       -> ramesh deoli || adeoli || aman deoli
+/ [0-9]+/               -> 	122255484848
+/ [0-9]{10}/            -> 01234567893
+/[1-9][0-9]{9}/         -> 9929887766
+/ [a-z]{5,10}/          -> aeiou || jiojiojioj
+/ [a-z]{5,}/            -> aeiou || jiojiojioj....till infinity
+
+2nd : Match using META characters
+
+/ \w{5} /               -> _koke || aman_
+now it matches the words till the limit5 and matches [a-zA-Z0-9_]
+
